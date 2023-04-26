@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  html {
+		@apply scroll-smooth;
+	}
+	::-webkit-scrollbar {
+		@apply absolute h-1 w-1 bg-transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		@apply bg-grey;
+	}
+
+  .btn-gray {
+    @apply bg-grey hover:bg-secondary text-base text-white py-2 px-8 rounded-md transition-all duration-300;
+  }
+  .btn-white {
+    @apply bg-white hover:bg-grey/20 hover:text-black text-base text-grey py-2 px-8 rounded-md transition-all duration-300;
+  }
+   
+}
+.dashborde input[type="radio"]:checked + label span {
+  background-color: #2E66F6;
+  box-shadow: 0px 0px 0px 2px white inset;
+}
+.dashborde input[type="radio"]:checked + label{
+  color: #2E66F6;
+}
