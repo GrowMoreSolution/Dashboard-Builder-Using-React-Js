@@ -15,7 +15,7 @@ export default function Sidebar() {
                     </div>
                     <ol className='relative border-l border-grey/20 ml-10 mt-5'>
                         <li className='mb-8 ml-8'>
-                            <div className='absolute w-8 h-8 flex ring-1 ring-secondary items-center justify-center text-white text-base bg-secondary rounded-full mt-0 -left-4 border-[3px] border-white'>1</div>
+                            <div className='absolute w-8 h-8 flex ring-1 ring-accent items-center justify-center text-white text-base bg-accent rounded-full mt-0 -left-4 border-[3px] border-white'>1</div>
                             <h2 className='mb-1 py-2 text-base font-normal leading-none text-black'>Dashboard Information</h2>
                         </li>
                         <li className='mb-8 ml-8'>

@@ -17,7 +17,7 @@
 	}
 
   .btn-gray {
-    @apply bg-grey hover:bg-secondary text-base text-white py-2 px-8 rounded-md transition-all duration-300;
+    @apply bg-grey hover:bg-accent text-base text-white py-2 px-8 rounded-md transition-all duration-300;
   }
   .btn-white {
     @apply bg-white hover:bg-grey/20 hover:text-black text-base text-grey py-2 px-8 rounded-md transition-all duration-300;
