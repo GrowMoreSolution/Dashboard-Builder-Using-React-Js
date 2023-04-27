@@ -21,21 +21,21 @@ export default function Dashboard() {
                             <p className="block text-sm text-black mb-2.5">Who can see this Dashboard?</p>
                             <div className='flex items-center mr-4 mb-4'>
                                 <input id="radio1" type="radio" name="radio" className='hidden' />
-                                <label for="radio1" className='flex items-center cursor-pointer text-base'>
+                                <label htmlFor="radio1" className='flex items-center cursor-pointer text-base'>
                                     <span className='w-5 h-5 inline-block mr-2 rounded-full border border-grey flex-no-shrink'></span>
                                 Only Me</label>
                             </div>
 
                             <div className='flex items-center mr-4 mb-4'>
                                 <input id="radio2" type="radio" name="radio" className='hidden' />
-                                <label for="radio2" className='flex items-center cursor-pointer text-base'>
+                                <label htmlFor="radio2" className='flex items-center cursor-pointer text-base'>
                                 <span className='w-5 h-5 inline-block mr-2 rounded-full border border-grey flex-no-shrink'></span>
                                 Everyone</label>
                             </div>
                         
                             <div className='flex items-center mr-4 mb-3'>
                                 <input id="radio3" type="radio" name="radio" className='hidden' />
-                                <label for="radio3" className='flex items-center cursor-pointer text-base'>
+                                <label htmlFor="radio3" className='flex items-center cursor-pointer text-base'>
                                     <span className='w-5 h-5 inline-block mr-2 rounded-full border border-grey flex-no-shrink'></span>
                                     Specific Use, Team or role 
                                 </label>
