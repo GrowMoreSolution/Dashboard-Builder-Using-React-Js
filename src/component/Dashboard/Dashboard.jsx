@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar from './Sidebar'
+import { Link } from 'react-router-dom'
 
 export default function Dashboard() {
   return (
@@ -47,7 +48,9 @@ export default function Dashboard() {
                     </div>
                     <div className='border-t border-grey/20 py-5 px-12 flex items-center justify-end gap-2'>
                         <button type='buttom' className='btn-white'>Cancel</button>
-                        <button type='button' className='btn-gray'>Next</button>
+                        <Link className="header-brand" to="/dashboard"><button type='button' className='btn-gray'> Next</button></Link>
+
+                        {/* <button type='button' className='btn-gray'>Next</button> */}
                     </div>
                 </div>
             </div>

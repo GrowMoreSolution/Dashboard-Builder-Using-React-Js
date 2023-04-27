@@ -19,6 +19,8 @@ export default function Grid() {
       cols={{ lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 }}
       rowHeight={60}
     >
+      
+
       <div key="a">
         <Widget id="a" backgroundColor="#867ae9" />
       </div>

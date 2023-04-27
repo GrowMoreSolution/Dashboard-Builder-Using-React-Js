@@ -1,20 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
-import Dashboard from './component/Dashboard/Dashboard';
-import DashboardTemplate from './component/Dashboard/DashboardTemplate';
-import Header from './component/Header/Header';
+import router from "./router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import '../node_modules/react-grid-layout/css/styles.css';
 import '../node_modules/react-resizable/css/styles.css';
 
 function App() {
   return (
-    <div className='antialiased font-main text-sm text-black'>
-      <Header/>
-    {/* <Dashboard/> */}
-    {/* <DashboardTemplate/>  */}
-
-
-  </div>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          {router.map((item, k) => {
+            return (
+              <Route
+                key={k}
+                element={<item.element />}
+                path={item.path}
+                exact={item.exact}
+              />
+            );
+          })}
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
