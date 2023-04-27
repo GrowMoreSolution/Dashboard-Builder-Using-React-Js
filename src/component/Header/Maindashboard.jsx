@@ -1,39 +1,42 @@
 import React from 'react'
 import Grid from './Grid'
 import Mainheader from './Mainheader'
+import ChartGrid from '../GridComponent/ChartGrid'
+import Numbers from '../GridComponent/Numbers'
+import Simpledate from '../GridComponent/Simpledate'
 
 export default function Maindashboard() {
   return (
     <div>
        <Mainheader/>
-       <div className='px-4 bg-white grid grid-cols-3 shadow items-center relative z-10'>
-            <div>
+       <div className='px-4 bg-white flex justify-between shadow items-center gap-5 relative z-10 py-4 md:py-0'>
+            <div className='md:grid grid-flow-row hidden'>
                 <ul className='flex overflow-x-auto overflow-y-hidden mt-2 gap-4 text-light-grey text-base'>
                     <li><a href="/" className='px-2 py-3 whitespace-nowrap -mb-[1px] flex items-center font-semibold border-b-[3px] border-black text-black' >Content</a></li>
                     <li><a href="/" className='px-2 py-3 whitespace-nowrap -mb-[1px] flex items-center hover:border-b-[3px] border-transparent hover:!border-black hover:text-black'>Dashboard Information</a></li>
                 </ul>
             </div>
-            <div className='text-center' >
+            {/* <div className='text-center hidden lg:block' >
                 <div className='items-center justify-center inline-flex col-span-1 space-x-1 border border-grey/20 bg-white rounded-md'>
                     <button type='button' className='flex items-center p-2 bg-white rounded-l-md hover:shadow-lg transition-all duration-300'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                     </button>
                     <button type='button' className='flex items-center p-2 bg-white hover:shadow-lg transition-all duration-300'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                     </button>
                     <button type='button' className='flex items-center p-2 bg-white rounded-r-md hover:shadow-lg transition-all duration-300'>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                     </button>
                 </div>
                 
-            </div>
+            </div> */}
             <div className='flex justify-end gap-2'>
                 <div className='flex items-center'>
                     <button type='button' className='flex items-center p-2 bg-white border border-r-0 border-grey/20 rounded-l-md hover:shadow-lg transition-all duration-300'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-left"><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-corner-up-left"><polyline points="9 14 4 9 9 4"></polyline><path d="M20 20v-7a4 4 0 0 0-4-4H4"></path></svg>
                     </button>
                     <button type='button' className='flex items-center p-2 bg-white border border-grey/20 rounded-r-md hover:shadow-lg transition-all duration-300'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-corner-up-right"><polyline points="15 14 20 9 15 4"></polyline><path d="M4 20v-7a4 4 0 0 1 4-4h12"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-corner-up-right"><polyline points="15 14 20 9 15 4"></polyline><path d="M4 20v-7a4 4 0 0 1 4-4h12"></path></svg>
                     </button>
                 </div>
                 <div className='h-[38px] w-px bg-grey/40 mx-3'></div>
@@ -46,7 +49,7 @@ export default function Maindashboard() {
             </div>
        </div>
        <div className='flex items-start'>
-                <div className='w-64 lg:w-96 p-4 flex-none bg-white h-[calc(100vh-130px)] border-r border-light-grey/20'>
+                <div className='w-64 lg:w-96 p-4 flex-none bg-white h-[calc(100vh-130px)] border-r border-light-grey/20 hidden sm:block'>
                     <div className="">
                         <p className="mb-4 text-base font-semibold">Widget</p>
                         <div className="grid grid-flow-row gap-3">
@@ -111,11 +114,11 @@ export default function Maindashboard() {
                         <div className="grid grid-flow-row gap-5">
                             <div className="">
                                 <p className="text-sm mb-2 font-semibold">Widget Name</p>
-                                <input type="text" class="form-input px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md"/>
+                                <input type="text" className="form-input px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md"/>
                             </div>
                             <div className="">
                                 <p className="text-sm mb-2 font-semibold">Value Source</p>
-                                <select class="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
+                                <select className="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
                                     <option>Deals</option>
                                     <option>Deals</option>
                                     <option>Deals</option>
@@ -124,7 +127,7 @@ export default function Maindashboard() {
                             </div>
                             <div className="">
                                 <p className="text-sm mb-2 font-semibold">Value Type</p>
-                                <select class="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
+                                <select className="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
                                     <option>Actule Deals Value</option>
                                     <option>Actule Deals Value</option>
                                     <option>Actule Deals Value</option>
@@ -166,9 +169,9 @@ export default function Maindashboard() {
                             </div>
                             <div className="">
                                 <p className="text-sm mb-2 font-semibold">Data Setting</p>
-                                <div class="flex items-center p-1.5 gap-3">
+                                <div className="flex items-center p-1.5 gap-3">
                                     <input id="teams" type="checkbox" className="w-[18px] h-[18px] text-accent bg-white border-grey/20 rounded focus:ring-0 focus:outline-0 focus:outline-offset-0 focus:ring-offset-0" />
-                                    <label for="teams" className="text-black text-base">Compare with past data</label>
+                                    <label htmlFor="teams" className="text-black text-base">Compare with past data</label>
                                 </div>
                             </div>
                             <div className="">
@@ -217,8 +220,13 @@ export default function Maindashboard() {
                             </div>
                         </div>
                     </div> */}
-
-                    <Grid/>
+                    <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>
+                        <Numbers/>
+                        <Numbers/>
+                        <ChartGrid/>
+                        <Simpledate/>
+                    </div>
+                    {/* <Grid/> */}
                 </div>
             </div>
     </div>

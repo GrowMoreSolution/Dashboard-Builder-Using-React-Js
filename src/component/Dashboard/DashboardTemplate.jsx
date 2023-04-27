@@ -27,7 +27,7 @@ export default function DashboardTemplate() {
                             <Link to='/maindashboard'>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
@@ -35,56 +35,56 @@ export default function DashboardTemplate() {
                             </Link>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
                             </div>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
                             </div>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
                             </div>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
                             </div>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
                             </div>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
                             </div>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
                             </div>
                             <div className='border border-grey/20 rounded-md p-4 cursor-pointer hover:shadow-2xl transition-all duration-300'>
                                 <div className='w-full h-32 overflow-hidden mb-4 bg-soft flex items-center justify-center text-accent'>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                                 </div>
                                 <h3 className='mb-1 font-semibold text-lg text-black'>Blank Dashboard</h3>
                                 <p>Start with a blank dashborde and add any reports you need.</p>
