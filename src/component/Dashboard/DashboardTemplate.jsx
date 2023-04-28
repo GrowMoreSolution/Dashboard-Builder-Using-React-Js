@@ -126,7 +126,7 @@ export default function DashboardTemplate() {
                         </div>
                     </div>
                     <div className='border-t border-grey/20 py-5 px-12 flex items-center justify-start gap-2'>
-                    <Link className="header-brand btn-gray" to="/">previous</Link>
+                    <Link className="header-brand btn-gray" to="/">Previous</Link>
                         <button type='buttom' className='btn-white'>Cancel</button>
                     </div>
                 </div>
