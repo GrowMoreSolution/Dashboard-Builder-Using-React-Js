@@ -4,8 +4,8 @@ import Calender from './component/GridComponent/Calender';
 import ChartGrid from './component/GridComponent/ChartGrid';
 import Gantt from './component/GridComponent/Gantt';
 import Numbers from './component/GridComponent/Numbers';
-import Simpledate from './component/GridComponent/Simpledate';
-import Worlload from './component/GridComponent/Worlload';
+import Simpledata from './component/GridComponent/Simpledata';
+import Workload from './component/GridComponent/Workload';
 import Maindashboard from './component/Header/Maindashboard';
 
 export default [

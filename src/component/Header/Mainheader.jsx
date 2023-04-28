@@ -10,7 +10,7 @@ export default function Mainheader() {
     <h1 className='text-center font-semibold text-lg hidden sm:block text-white'>New Dashboard</h1>
     <div className='flex items-center justify-end gap-3'>
         <p className='text-white/80 text-xs hidden lg:block'>Last Saved: Today at 4:30PM</p>
-        <button type='button' className='btn-gray bg-transparent border border-grey/50 px-4 text-sm py-2 hover:bg-grey hover:text-white hover:border-grey text-white'>Save as darft</button>
+        <button type='button' className='btn-gray bg-transparent border border-grey/50 px-4 text-sm py-2 hover:bg-grey hover:text-white hover:border-grey text-white'>Save as Draft</button>
         <button type='button' className='btn-gray bg-orange-600 border border-orange-600 hover:bg-transparent px-4 py-2 text-sm text-white'>Save & Publish</button>
     </div>
 </div>

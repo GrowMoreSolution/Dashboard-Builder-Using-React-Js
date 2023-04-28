@@ -17,7 +17,7 @@ export default function Dashboard() {
                                 <input type="text" name="first-name" placeholder='Please Enter Name' id="first-name" className="block w-80 rounded-md border border-grey/50 px-2 py-1.5 text-black shadow-sm focus:ring-0 focus:shadow-none placeholder:text-gray-400 text-sm leading-6" />
                             </div>
                         </div> 
-                        <div className='mb-5 dashborde'>
+                        <div className='mb-5 dashboard'>
                             <p className="block text-sm text-black mb-2.5">Who can see this Dashboard?</p>
                             <div className='flex items-center mr-4 mb-4'>
                                 <input id="radio1" type="radio" name="radio" className='hidden' />
@@ -48,7 +48,7 @@ export default function Dashboard() {
                     </div>
                     <div className='border-t border-grey/20 py-5 px-12 flex items-center justify-end gap-2'>
                         <button type='buttom' className='btn-white'>Cancel</button>
-                        <Link className="header-brand" to="/dashboard"><button type='button' className='btn-gray'> Next</button></Link>
+                        <Link className="header-brand btn-gray" to="/dashboard">Next</Link>
 
                         {/* <button type='button' className='btn-gray'>Next</button> */}
                     </div>
