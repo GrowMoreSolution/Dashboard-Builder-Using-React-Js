@@ -21,7 +21,7 @@ export default function Grid() {
     const dropPosition = monitor.getClientOffset();
     const dropArea = monitor.getSourceClientOffset();
     const x = Math.floor((dropPosition.x - dropArea.x) / 100);
-    const y = Math.floor((dropPosition.y - dropArea.y) / 100);
+    const y = Math.floor((dropPosition.y - dropArea.y) / 60);
     const currentTime = Date.now();
     const timeString = new Date(currentTime).toLocaleString();
     const newItem = {
@@ -30,16 +30,15 @@ export default function Grid() {
       x,
       y,
       w: 1,
-      h: 1,
+      h: 6,
     };
-    // const Item = [  ...layouts.lg , ...newItem  ]
-   
-    const newLayouts = {
-      lg: [...layouts.lg, newItem],
-    };
-    setLayout(newLayouts);
-    // console.log(layout);
-    return;
+  
+    // Update layouts state with the new item added to the end of the array
+    setLayout((prevLayouts) => {
+      return {
+        lg: [...prevLayouts.lg, newItem],
+      };
+    });
   };
 
   const [{ canDrop, isOver }, drop] = useDrop(() => ({
@@ -57,35 +56,27 @@ export default function Grid() {
         className="layout"
         layouts={layout}
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-        cols={{ lg: 4, md: 3, sm: 2, xs: 1, xxs: 1 }}
+        cols={{ lg: 4, md: 3, sm: 3, xs: 1, xxs: 1 }}
         rowHeight={60}
       >
-
         {layout.lg.map((item) => {
-          
-
           return (
             <div key={item.i}>
               {item.data === 1 ? (
-                
                 <Numbers />
-
               ) : item.data === 2 ? (
-                
-                <ChartGrid /> 
-               
+                <ChartGrid />
               ) : item.data === 3 ? (
                 <Simpledata />
-                )
-                : item.data === 4 ? (
-                  <Calender />
-                  )
-                  : item.data === 5 ? (
-                    <Charteithtext/>
-                    )
-                    : item.data === 6 ? (
-                      <Emailreport/>
-                      ):<Numbers/>}
+              ) : item.data === 4 ? (
+                <Calender />
+              ) : item.data === 5 ? (
+                <Charteithtext />
+              ) : item.data === 6 ? (
+                <Emailreport />
+              ) : (
+                <Numbers />
+              )}
             </div>
           );
         })}
