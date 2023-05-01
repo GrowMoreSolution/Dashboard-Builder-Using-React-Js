@@ -1,13 +1,14 @@
-import React from 'react'
+import React,{useState} from "react";
 import Sidebar from './Sidebar'
 import { Link } from 'react-router-dom'
 
 export default function DashboardTemplate() {
+
   return (
     <div>
        <div className='w-full h-full bg-white'>
             <div className='flex items-start'>
-                <Sidebar/>
+                <Sidebar value={1}/>
                 <div className='w-full flex-1'>
                     <div className='border-b border-grey/20 px-6 pt-6 lg:px-12 lg:pt-12'>
                         <h2 className='text-xl font-bold text-black mb-8'>Dashboard Template</h2>

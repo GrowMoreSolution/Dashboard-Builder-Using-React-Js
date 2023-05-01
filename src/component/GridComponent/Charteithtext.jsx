@@ -14,17 +14,17 @@ export default function Charteithtext() {
             <div className='flex flex-wrap gap-2'>
                 <div className=''>
                     <p className='text-base text-black font-semibold mb-4'>Company Goals</p>
-                    <div class="svg-item">
-                        <svg width="100%" height="100%" viewBox="0 0 40 40" class="donut">
-                            <circle class="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
-                            <circle class="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5"></circle>
-                            <circle class="donut-segment donut-segment-3" cx="20" cy="20" r="15.91549430918954" fill="transparent" stroke-width="3.5" stroke-dasharray="30 70" stroke-dashoffset="25"></circle>
-                            <g class="donut-text donut-text-2">
+                    <div className="svg-item">
+                        <svg width="100%" height="100%" viewBox="0 0 40 40" className="donut">
+                            <circle className="donut-hole" cx="20" cy="20" r="15.91549430918954" fill="#fff"></circle>
+                            <circle className="donut-ring" cx="20" cy="20" r="15.91549430918954" fill="transparent" strokeWidth="3.5"></circle>
+                            <circle className="donut-segment donut-segment-3" cx="20" cy="20" r="15.91549430918954" fill="transparent" strokeWidth="3.5" stroke-dasharray="30 70" stroke-dashoffset="25"></circle>
+                            <g className="donut-text donut-text-2">
                                 <text y="40%" transform="translate(0, 2)">
-                                    <tspan x="50%" text-anchor="middle" class="donut-data">February Goals</tspan>   
+                                    <tspan x="50%" text-anchor="middle" className="donut-data">February Goals</tspan>   
                                 </text>
                                 <text y="55%" transform="translate(0, 2)">
-                                    <tspan x="50%" text-anchor="middle" class="donut-percent">$300,000</tspan>   
+                                    <tspan x="50%" text-anchor="middle" className="donut-percent">$300,000</tspan>   
                                 </text>
                             </g>
                         </svg>
@@ -38,21 +38,21 @@ export default function Charteithtext() {
                             <p className='text-base text-black'>Marketing</p>
                             <p className='text-sm font-semibold text-grey'><samp className='text-black'>$29,000/</samp> $150,000</p>
                         </div>
-                        <div class="w-full h-2 bg-black/10 rounded-full"><div class="bg-[#ff7043] h-2 rounded-full w-2/12"></div></div>
+                        <div className="w-full h-2 bg-black/10 rounded-full"><div className="bg-[#ff7043] h-2 rounded-full w-2/12"></div></div>
                     </div>
                     <div className='space-y-1 mb-5'>
                         <div className='flex items-center justify-between gap-2'>
                             <p className='text-base text-black'>Sales</p>
                             <p className='text-sm font-semibold text-grey'><samp className='text-black'>$120,060/</samp> $150,000</p>
                         </div>
-                        <div class="w-full h-2 bg-black/10 rounded-full"><div class="bg-[#ff7043] h-2 rounded-full w-8/12"></div></div>
+                        <div className="w-full h-2 bg-black/10 rounded-full"><div className="bg-[#ff7043] h-2 rounded-full w-8/12"></div></div>
                     </div>
                     <div className='space-y-1 mb-5'>
                         <div className='flex items-center justify-between gap-2'>
                             <p className='text-base text-black'>Digital Marketing</p>
                             <p className='text-sm font-semibold text-grey'><samp className='text-black'>$139,100/</samp> $150,000</p>
                         </div>
-                        <div class="w-full h-2 bg-black/10 rounded-full"><div class="bg-[#ff7043] h-2 rounded-full w-10/12"></div></div>
+                        <div className="w-full h-2 bg-black/10 rounded-full"><div className="bg-[#ff7043] h-2 rounded-full w-10/12"></div></div>
                     </div>
                     </div>
                     

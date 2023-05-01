@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { memo } from "react";
-
 import Grid from "./Grid";
 import Mainheader from "./Mainheader";
 import ChartGrid from "../GridComponent/ChartGrid";
@@ -9,8 +8,11 @@ import Simpledate from "../GridComponent/Simpledata";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { Box } from "./Box.jsx";
+import { useEffect } from "react";
 
- const Maindashboard = memo(function Maindashboard() {
+const Maindashboard = memo(function Maindashboard(val) {
+  const [BoxId, SetBoxId] = useState(1);
+  console.log(val);
   return (
     <DndProvider backend={HTML5Backend}>
       <div>
@@ -109,358 +111,492 @@ import { Box } from "./Box.jsx";
         </div>
         <div className="flex items-start">
           <div className="w-64 lg:w-96 p-4 flex-none bg-white h-[calc(100vh-130px)] border-r border-light-grey/20 hidden sm:block">
-            <div className="">
-              <p className="mb-4 text-base font-semibold">Widget</p>
-              <div className="grid grid-flow-row gap-3">
-                <Box
-                  box={{
-                    id: 2,
-                    data: (
-                      <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
-                        <div className="flex-none p-3 text-grey">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
-                          </svg>
-                        </div>
-                        <div className="flex-1 p-3 flex items-center gap-2 text-black">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z"></path>
-                          </svg>
-                          <p>Chart</p>
-                        </div>
-                      </div>
-                    ),
-                  }}
-                />
-                <Box
-                  box={{
-                    id: 3,
-                    data: (
-                      <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
-                        <div className="flex-none p-3 text-grey">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
-                          </svg>
-                        </div>
-                        <div className="flex-1 p-3 flex items-center gap-2 text-black">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM40,112H80v32H40Zm56,0H216v32H96ZM216,64V96H40V64ZM40,160H80v32H40Zm176,32H96V160H216v32Z"></path>
-                          </svg>
-                          <p>Simple data</p>
-                        </div>
-                      </div>
-                    ),
-                  }}
-                />
-                <Box
-                  box={{
-                    id: 1,
-                    data: (
-                      <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
-                        <div className="flex-none p-3 text-grey">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
-                          </svg>
-                        </div>
-                        <div className="flex-1 p-3 flex items-center gap-2 text-black">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M144,48V208a8,8,0,0,1-16,0V62.13L100.12,78.86a8,8,0,1,1-8.24-13.72l40-24A8,8,0,0,1,144,48Z"></path>
-                          </svg>
-                          <p>Numbers</p>
-                        </div>
-                      </div>
-                    ),
-                  }}
-                />
-                <Box
-                  box={{
-                    id: 4,
-                    data: (
-                      <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
-                        <div className="flex-none p-3 text-grey">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
-                          </svg>
-                        </div>
-                        <div className="flex-1 p-3 flex items-center gap-2 text-black">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path>
-                          </svg>
-                          <p>Calendar</p>
-                        </div>
-                      </div>
-                    ),
-                  }}
-                />
-                 <Box
-                  box={{
-                    id: 5,
-                    data: (
-                      <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
-                        <div className="flex-none p-3 text-grey">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
-                          </svg>
-                        </div>
-                        <div className="flex-1 p-3 flex items-center gap-2 text-black">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z"></path>
-                          </svg>
-                          <p>Charteithtext</p>
-                        </div>
-                      </div>
-                    ),
-                  }}
-                />
+           
+             { BoxId == 1 ? 
+              <div className="">
+                <p className="mb-4 text-base font-semibold">Widget</p>
+                <div className="grid grid-flow-row gap-3 " onDragEndCapture={() =>SetBoxId(2)}>
                   <Box
-                  box={{
-                    id: 6,
-                    data: (
-                      <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
-                        <div className="flex-none p-3 text-grey">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            fill="currentColor"
-                            viewBox="0 0 256 256"
-                          >
-                            <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
-                          </svg>
+                    box={{
+                      id: 2,
+                      data: (
+                        <div
+                          
+                          className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20"
+                        >
+                          <div className="flex-none p-3 text-grey">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
+                            </svg>
+                          </div>
+                          <div className="flex-1 p-3 flex items-center gap-2 text-black">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z"></path>
+                            </svg>
+                            <p>Chart</p>
+                          </div>
                         </div>
-                        <div className="flex-1 p-3 flex items-center gap-2 text-black">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path></svg>
-                          <p>Email report</p>
+                      ),
+                    }}
+                  />
+                  <Box
+                    box={{
+                      id: 3,
+                      data: (
+                        <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
+                          <div className="flex-none p-3 text-grey">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
+                            </svg>
+                          </div>
+                          <div className="flex-1 p-3 flex items-center gap-2 text-black">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM40,112H80v32H40Zm56,0H216v32H96ZM216,64V96H40V64ZM40,160H80v32H40Zm176,32H96V160H216v32Z"></path>
+                            </svg>
+                            <p>Simple data</p>
+                          </div>
                         </div>
-                      </div>
-                    ),
-                  }}
-                />
-              </div>
-            </div>
-            <div className="hidden">
-              <p className="mb-4 text-base font-semibold">Numbers</p>
-              <div className="grid grid-flow-row gap-5">
-                <div className="">
-                  <p className="text-sm mb-2 font-semibold">Widget Name</p>
-                  <input
-                    type="text"
-                    className="form-input px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md"
+                      ),
+                    }}
+                  />
+                  <Box
+                    box={{
+                      id: 1,
+                      data: (
+                        <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
+                          <div className="flex-none p-3 text-grey">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
+                            </svg>
+                          </div>
+                          <div className="flex-1 p-3 flex items-center gap-2 text-black">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M144,48V208a8,8,0,0,1-16,0V62.13L100.12,78.86a8,8,0,1,1-8.24-13.72l40-24A8,8,0,0,1,144,48Z"></path>
+                            </svg>
+                            <p>Numbers</p>
+                          </div>
+                        </div>
+                      ),
+                    }}
+                  />
+                  <Box
+                    box={{
+                      id: 4,
+                      data: (
+                        <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
+                          <div className="flex-none p-3 text-grey">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
+                            </svg>
+                          </div>
+                          <div className="flex-1 p-3 flex items-center gap-2 text-black">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"></path>
+                            </svg>
+                            <p>Calendar</p>
+                          </div>
+                        </div>
+                      ),
+                    }}
+                  />
+                  <Box
+                    box={{
+                      id: 5,
+                      data: (
+                        <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
+                          <div className="flex-none p-3 text-grey">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
+                            </svg>
+                          </div>
+                          <div className="flex-1 p-3 flex items-center gap-2 text-black">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z"></path>
+                            </svg>
+                            <p>Charteithtext</p>
+                          </div>
+                        </div>
+                      ),
+                    }}
+                  />
+                  <Box
+                    box={{
+                      id: 6,
+                      data: (
+                        <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
+                          <div className="flex-none p-3 text-grey">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="currentColor"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M104,60A12,12,0,1,1,92,48,12,12,0,0,1,104,60Zm60,12a12,12,0,1,0-12-12A12,12,0,0,0,164,72ZM92,116a12,12,0,1,0,12,12A12,12,0,0,0,92,116Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,116ZM92,184a12,12,0,1,0,12,12A12,12,0,0,0,92,184Zm72,0a12,12,0,1,0,12,12A12,12,0,0,0,164,184Z"></path>
+                            </svg>
+                          </div>
+                          <div className="flex-1 p-3 flex items-center gap-2 text-black">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="20"
+                              height="20"
+                              fill="#000000"
+                              viewBox="0 0 256 256"
+                            >
+                              <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path>
+                            </svg>
+                            <p>Email report</p>
+                          </div>
+                        </div>
+                      ),
+                    }}
                   />
                 </div>
+              </div> :
                 <div className="">
-                  <p className="text-sm mb-2 font-semibold">Value Source</p>
-                  <select className="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
-                    <option>Deals</option>
-                    <option>Deals</option>
-                    <option>Deals</option>
-                    <option>Deals</option>
-                  </select>
-                </div>
-                <div className="">
-                  <p className="text-sm mb-2 font-semibold">Value Type</p>
-                  <select className="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
-                    <option>Actule Deals Value</option>
-                    <option>Actule Deals Value</option>
-                    <option>Actule Deals Value</option>
-                    <option>Actule Deals Value</option>
-                  </select>
-                </div>
-                <div className="">
-                  <p className="text-sm mb-2 font-semibold">Value Unit</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-2">
-                    <div className="relative">
-                      <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
-                        <h3 className="font-semibold text-lg relative z-10 mx-auto">
-                          $
-                        </h3>
-                        <input
-                          name="teamsize"
-                          type="radio"
-                          className="form-checkbox relative hidden z-10 peer"
-                        />
-                        <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
-                      </label>
-                    </div>
-                    <div className="relative">
-                      <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
-                        <h3 className="font-semibold text-lg relative z-10 mx-auto">
-                          Є
-                        </h3>
-                        <input
-                          name="teamsize"
-                          type="radio"
-                          className="form-checkbox relative hidden z-10 peer"
-                        />
-                        <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
-                      </label>
-                    </div>
-                    <div className="relative">
-                      <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
-                        <h3 className="font-semibold text-lg relative z-10 mx-auto">
-                          £
-                        </h3>
-                        <input
-                          name="teamsize"
-                          type="radio"
-                          className="form-checkbox relative hidden z-10 peer"
-                        />
-                        <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
-                      </label>
-                    </div>
-                    <div className="relative">
-                      <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
-                        <h3 className="font-semibold text-lg relative z-10 mx-auto">
-                          %
-                        </h3>
-                        <input
-                          name="teamsize"
-                          type="radio"
-                          className="form-checkbox relative hidden z-10 peer"
-                        />
-                        <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div className="">
-                  <p className="text-sm mb-2 font-semibold">Data Setting</p>
-                  <div className="flex items-center p-1.5 gap-3">
+                <p className="mb-4 text-base font-semibold">Numbers</p>
+                <div className="grid grid-flow-row gap-5">
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Widget Name</p>
                     <input
-                      id="teams"
-                      type="checkbox"
-                      className="w-[18px] h-[18px] text-accent bg-white border-grey/20 rounded focus:ring-0 focus:outline-0 focus:outline-offset-0 focus:ring-offset-0"
+                      type="text"
+                      className="form-input px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md"
                     />
-                    <label htmlFor="teams" className="text-black text-base">
-                      Compare with past data
-                    </label>
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Value Source</p>
+                    <select className="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
+                      <option>Deals</option>
+                      <option>Deals</option>
+                      <option>Deals</option>
+                      <option>Deals</option>
+                    </select>
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Value Type</p>
+                    <select className="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
+                      <option>Actule Deals Value</option>
+                      <option>Actule Deals Value</option>
+                      <option>Actule Deals Value</option>
+                      <option>Actule Deals Value</option>
+                    </select>
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Value Unit</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-2">
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
+                          <h3 className="font-semibold text-lg relative z-10 mx-auto">
+                            $
+                          </h3>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
+                          <h3 className="font-semibold text-lg relative z-10 mx-auto">
+                            Є
+                          </h3>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
+                          <h3 className="font-semibold text-lg relative z-10 mx-auto">
+                            £
+                          </h3>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
+                          <h3 className="font-semibold text-lg relative z-10 mx-auto">
+                            %
+                          </h3>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Data Setting</p>
+                    <div className="flex items-center p-1.5 gap-3">
+                      <input
+                        id="teams"
+                        type="checkbox"
+                        className="w-[18px] h-[18px] text-accent bg-white border-grey/20 rounded focus:ring-0 focus:outline-0 focus:outline-offset-0 focus:ring-offset-0"
+                      />
+                      <label htmlFor="teams" className="text-black text-base">
+                        Compare with past data
+                      </label>
+                    </div>
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Value Unit</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-2">
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
+                          <div className="h-12 w-4/12 bg-grey/20 rounded-md"></div>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
+                          <div className="h-12 w-6/12 bg-grey/20 rounded-md"></div>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
+                          <div className="h-12 w-full bg-grey/20 rounded-md"></div>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="">
-                  <p className="text-sm mb-2 font-semibold">Value Unit</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-2">
-                    <div className="relative">
-                      <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
-                        <div className="h-12 w-4/12 bg-grey/20 rounded-md"></div>
-                        <input
-                          name="teamsize"
-                          type="radio"
-                          className="form-checkbox relative hidden z-10 peer"
-                        />
-                        <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
-                      </label>
+              </div>}
+              {/* <div className="hidden">
+                <p className="mb-4 text-base font-semibold">Numbers</p>
+                <div className="grid grid-flow-row gap-5">
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Widget Name</p>
+                    <input
+                      type="text"
+                      className="form-input px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md"
+                    />
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Value Source</p>
+                    <select className="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
+                      <option>Deals</option>
+                      <option>Deals</option>
+                      <option>Deals</option>
+                      <option>Deals</option>
+                    </select>
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Value Type</p>
+                    <select className="form-select px-3 py-2 w-full border-grey/50 focus:ring-0 focus:border-grey text-base text-black rounded-md">
+                      <option>Actule Deals Value</option>
+                      <option>Actule Deals Value</option>
+                      <option>Actule Deals Value</option>
+                      <option>Actule Deals Value</option>
+                    </select>
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Value Unit</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-2">
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
+                          <h3 className="font-semibold text-lg relative z-10 mx-auto">
+                            $
+                          </h3>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
+                          <h3 className="font-semibold text-lg relative z-10 mx-auto">
+                            Є
+                          </h3>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
+                          <h3 className="font-semibold text-lg relative z-10 mx-auto">
+                            £
+                          </h3>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-lg border border-grey/20 bg-white justify-between items-start gap-4 py-1.5 px-2.5 text-center">
+                          <h3 className="font-semibold text-lg relative z-10 mx-auto">
+                            %
+                          </h3>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
                     </div>
-                    <div className="relative">
-                      <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
-                        <div className="h-12 w-6/12 bg-grey/20 rounded-md"></div>
-                        <input
-                          name="teamsize"
-                          type="radio"
-                          className="form-checkbox relative hidden z-10 peer"
-                        />
-                        <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
-                      </label>
-                    </div>
-                    <div className="relative">
-                      <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
-                        <div className="h-12 w-full bg-grey/20 rounded-md"></div>
-                        <input
-                          name="teamsize"
-                          type="radio"
-                          className="form-checkbox relative hidden z-10 peer"
-                        />
-                        <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                  </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Data Setting</p>
+                    <div className="flex items-center p-1.5 gap-3">
+                      <input
+                        id="teams"
+                        type="checkbox"
+                        className="w-[18px] h-[18px] text-accent bg-white border-grey/20 rounded focus:ring-0 focus:outline-0 focus:outline-offset-0 focus:ring-offset-0"
+                      />
+                      <label htmlFor="teams" className="text-black text-base">
+                        Compare with past data
                       </label>
                     </div>
                   </div>
+                  <div className="">
+                    <p className="text-sm mb-2 font-semibold">Value Unit</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-2">
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
+                          <div className="h-12 w-4/12 bg-grey/20 rounded-md"></div>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
+                          <div className="h-12 w-6/12 bg-grey/20 rounded-md"></div>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                      <div className="relative">
+                        <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
+                          <div className="h-12 w-full bg-grey/20 rounded-md"></div>
+                          <input
+                            name="teamsize"
+                            type="radio"
+                            className="form-checkbox relative hidden z-10 peer"
+                          />
+                          <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-6">
-            {/* <div className="grid grid-cols-12 gap-6">
-                        <div className="col-span-3 bg-white p-6 rounded-md shadow">
-                            <div className="flex items-center gap-2 text-grey/80 mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-68a28,28,0,0,1-28,28h-4v8a8,8,0,0,1-16,0v-8H104a8,8,0,0,1,0-16h36a12,12,0,0,0,0-24H116a28,28,0,0,1,0-56h4V72a8,8,0,0,1,16,0v8h16a8,8,0,0,1,0,16H116a12,12,0,0,0,0,24h24A28,28,0,0,1,168,148Z"></path></svg>
-                                <p className="text-sm">Active deals</p>
-                            </div>
-                            <div className="flex flex-wrap gap-2">
-                                <p className="text-5xl text-black font-semibold">$1,000</p>
-                                <span></span>
-                            </div>
-                        </div>
-                    </div> */}
-            {/* <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-            <Numbers />
-            <Numbers />
-            <ChartGrid />
-            <Simpledate />
-          </div> */}
-            <Grid />
+              </div> */}
+           
+          </div>  
+          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-6" onClick={() =>SetBoxId(1)}>
+            <Grid  />
           </div>
         </div>
       </div>
     </DndProvider>
   );
 });
-export default Maindashboard
+export default Maindashboard;

@@ -11,6 +11,7 @@ export const Box = function Box({ box }) {
   }));
   const opacity = isDragging ? 0.4 : 1;
   return (
+    
     <div ref={drag} style={{ opacity: opacity }} data-testid={`box`}>
       {box.data}
     </div>
