@@ -89,7 +89,7 @@ export default function Grid({SetBoxId}) {
         className="layout"
         layouts={layout}
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
-        cols={{ lg: 4, md: 3, sm: 3, xs: 1, xxs: 1 }}
+        cols={{ lg: 1, md: 3, sm: 3, xs: 1, xxs: 1 }}
         // rowHeight={60}
       >
         {layout.lg.map((item,i) => {
