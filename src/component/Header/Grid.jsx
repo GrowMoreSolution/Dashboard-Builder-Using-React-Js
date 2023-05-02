@@ -55,28 +55,28 @@ export default function Grid({SetBoxId}) {
       canDrop: monitor.canDrop(),
     }),
   }));
-  const SetGrid = (a,b)=>{
+  const SetGrid = (value,id)=>{
     // var element = document.getElementById(b);
     // element.style.width = "80%";
     // document.getElementById("b").setAttribute("style","width:25%"); 
-    if(a==1){
-      document.getElementById(`wi-${b}`).style.width='25%';
+    if(value==1){
+      document.getElementById(`wi-${id}`).style.width='25%';
     }
-    else if(a==2){
-      document.getElementById(`wi-${b}`).style.width='50%';
+    else if(value==2){
+      document.getElementById(`wi-${id}`).style.width='50%';
     }
-    else if(a==3){
-      document.getElementById(`wi-${b}`).style.width='100%';
+    else if(value==3){
+      document.getElementById(`wi-${id}`).style.width='100%';
     }
    
   }
 
-  const Setdis = (a,b)=>{
-    if(a==2){
-    document.getElementById(`di-${b}`).style.display='block'
+  const Setdis = (value,id)=>{
+    if(value==2){
+    document.getElementById(`di-${id}`).style.display='block'
     return
     }
-      document.getElementById(`di-${b}`).style.display='none'
+      document.getElementById(`di-${id}`).style.display='none'
   }
   useEffect(()=>{
     SetGrid(BoxWidth,BoxDivId)
@@ -96,7 +96,7 @@ export default function Grid({SetBoxId}) {
           return (
           
             <div key={item.i}  className="group" onClick={()=> Setdis(1,BoxDivId)} >
-              <button  id={`wi-${i}`} className={`focus:border focus:border-blue-500 focus:rounded focus:!h-auto w-1/2 wid-${i}`} onClick={(e)=>{SetBoxId(e,2);Setdis(2,i);SetBoxDivId(i)}}>
+              <button  id={`wi-${i}`} className={`focus:border focus:border-blue-500 focus:rounded focus:!h-auto w-full wid-${i}`} onClick={(e)=>{SetBoxId(e,2);Setdis(2,i);SetBoxDivId(i)}}>
               {item.data === 1 ? (
                 <Numbers />
               ) : item.data === 2 ? (

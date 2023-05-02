@@ -98,7 +98,7 @@ export default function Dashboard() {
                     Can Edit
                   </div> */}
                     
-                  <select  className="w-[340px] rounded-md border border-grey/50 px-2 py-1.5 text-black shadow-sm focus:ring-0 focus:border-grey/50 focus:shadow-none placeholder:text-gray-400 text-sm leading-6" onChange={(e) => SetDropDownRole(e.target.value)}>
+                  <select value={DropDownRole} className="w-[340px] rounded-md border border-grey/50 px-2 py-1.5 text-black shadow-sm focus:ring-0 focus:border-grey/50 focus:shadow-none placeholder:text-gray-400 text-sm leading-6" onChange={(e) => SetDropDownRole(e.target.value)}>
                     {/* <option value="">Can edit</option> */}
                     <option value=""></option>
                     <option value="1">1</option>
