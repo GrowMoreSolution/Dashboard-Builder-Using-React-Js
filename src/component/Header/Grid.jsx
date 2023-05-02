@@ -81,7 +81,7 @@ export default function Grid({SetBoxId},{BoxSize}) {
         {layout.lg.map((item,i) => {
           return (
           
-            <div key={item.i}  className="group !translate-x-0 !translate-y-0">
+            <div key={item.i}  className="group">
               <button  id={`wi-${i}`} className={`focus:border focus:border-blue-500 focus:rounded focus:!h-auto w-1/2 wid-${i}`} onClick={(e)=>{SetBoxId(e,2);Setdis(i)}}>
               {item.data === 1 ? (
                 <Numbers />

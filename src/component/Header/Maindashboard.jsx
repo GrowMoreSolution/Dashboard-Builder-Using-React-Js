@@ -610,7 +610,7 @@ const Maindashboard = memo(function Maindashboard(val) {
               </div> */}
            
           </div>  
-          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-6 relative" onClick={()=>{SetBoxId(1)}}>
+          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-4 relative" onClick={()=>{SetBoxId(1)}}>
             <div className="grid grid-cols-12 gap-4 lg:gap-6 absolute top-0 left-0 h-full w-full p-6">
               <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
               <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>

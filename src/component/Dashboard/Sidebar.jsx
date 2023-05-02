@@ -27,7 +27,7 @@ export default function Sidebar(props) {
                 <polyline points="15 18 9 12 15 6"></polyline>
               </svg>
             </button>
-            <p>Back to Manage Dashboard{props.value}</p>
+            <p>Back to Manage Dashboard</p>
           </div>
           <h1 className="text-2xl font-bold px-5 pb-5">Create Dashboard</h1>
         </div>
