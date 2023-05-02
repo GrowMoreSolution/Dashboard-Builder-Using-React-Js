@@ -12,7 +12,11 @@ import { useEffect } from "react";
 
 const Maindashboard = memo(function Maindashboard(val) {
   const [BoxId, SetBoxId] = useState(1);
-  console.log(val);
+
+  function demo(event,id){
+    event.stopPropagation()
+    SetBoxId(id)
+  }
   return (
     <DndProvider backend={HTML5Backend}>
       <div>
@@ -119,6 +123,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                   <Box
                     box={{
                       id: 2,
+                      height:"100%",
                       data: (
                         <div
                           
@@ -154,6 +159,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                   <Box
                     box={{
                       id: 3,
+                      height:"100%",
                       data: (
                         <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
                           <div className="flex-none p-3 text-grey">
@@ -186,6 +192,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                   <Box
                     box={{
                       id: 1,
+                      height:"100%",
                       data: (
                         <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
                           <div className="flex-none p-3 text-grey">
@@ -218,6 +225,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                   <Box
                     box={{
                       id: 4,
+                      height:"100%",
                       data: (
                         <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
                           <div className="flex-none p-3 text-grey">
@@ -250,6 +258,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                   <Box
                     box={{
                       id: 5,
+                      height:"100%",
                       data: (
                         <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
                           <div className="flex-none p-3 text-grey">
@@ -282,6 +291,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                   <Box
                     box={{
                       id: 6,
+                      height:"100%",
                       data: (
                         <div className="border border-grey/20 rounded-md w-full flex items-center divide-x divide-grey/20">
                           <div className="flex-none p-3 text-grey">
@@ -414,8 +424,9 @@ const Maindashboard = memo(function Maindashboard(val) {
                   <div className="">
                     <p className="text-sm mb-2 font-semibold">Value Unit</p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-2">
-                      <div className="relative">
-                        <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
+                      <div>
+                      <div className="relative"  >
+                        <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center"  >
                           <div className="h-12 w-4/12 bg-grey/20 rounded-md"></div>
                           <input
                             name="teamsize"
@@ -425,7 +436,10 @@ const Maindashboard = memo(function Maindashboard(val) {
                           <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
                         </label>
                       </div>
-                      <div className="relative">
+                      <p className="text-sm mt-1">Small</p>
+                      </div>
+                      <div>
+                      <div className="relative" >
                         <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
                           <div className="h-12 w-6/12 bg-grey/20 rounded-md"></div>
                           <input
@@ -436,7 +450,10 @@ const Maindashboard = memo(function Maindashboard(val) {
                           <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
                         </label>
                       </div>
-                      <div className="relative">
+                      <p className="text-sm mt-1">Medium</p>
+                      </div>
+                      <div>
+                      <div className="relative" >
                         <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
                           <div className="h-12 w-full bg-grey/20 rounded-md"></div>
                           <input
@@ -446,6 +463,8 @@ const Maindashboard = memo(function Maindashboard(val) {
                           />
                           <span className="rounded-lg border border-grey/20 peer-checked:border-grey absolute top-0 left-0 z-0 w-full h-full"></span>
                         </label>
+                      </div>
+                      <p className="text-sm mt-1">Large</p>
                       </div>
                     </div>
                   </div>
@@ -591,8 +610,8 @@ const Maindashboard = memo(function Maindashboard(val) {
               </div> */}
            
           </div>  
-          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-6" onClick={() =>SetBoxId(1)}>
-            <Grid  />
+          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-6" onClick={()=>{SetBoxId(1)}}>
+            <Grid  SetBoxId={demo} />
           </div>
         </div>
       </div>
