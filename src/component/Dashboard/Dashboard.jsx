@@ -87,18 +87,18 @@ export default function Dashboard() {
                   </label>
                 </div>
                 <div className="flex ml-6">
-                  <input
+                  {/* <input
                     type="text"
                     value={DropDownRole}
                     onChange={(e) => SetDropDownRole(e.target.value)}
                     placeholder="Search Sider"
-                    className="w-[250px] rounded-md border border-grey/50 border-r-0 px-2 py-1.5 text-black shadow-sm focus:ring-0 focus:border-grey/50 focus:shadow-none placeholder:text-gray-400 text-sm leading-6 rounded-r-none"
-                  />
+                    className=""
+                  /> */}
                   {/* <div className="bg-white text-light-grey flex justify-center items-center rounded-r-md px-2 font-semibold border border-l-0 border-grey/50 cursor-pointer">
                     Can Edit
                   </div> */}
                     
-                  <select  className="w-[90px] px-2 text-light-grey  text-[#a6a7aa] text-sm flex justify-center items-center  rounded-r-md  border-l-0 border-grey/50 focus:border-grey/50 focus:ring-inset focus:ring-transparent" onChange={(e) => SetDropDownRole(e.target.value)}>
+                  <select  className="w-[340px] rounded-md border border-grey/50 px-2 py-1.5 text-black shadow-sm focus:ring-0 focus:border-grey/50 focus:shadow-none placeholder:text-gray-400 text-sm leading-6" onChange={(e) => SetDropDownRole(e.target.value)}>
                     {/* <option value="">Can edit</option> */}
                     <option value=""></option>
                     <option value="1">1</option>
