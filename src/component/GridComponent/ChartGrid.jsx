@@ -78,7 +78,7 @@ export default function ChartGrid() {
                 {/* <div id="chart"> */}
                   {/* <ReactApexChart options={this.state.options} series={this.state.series} type="bar" height={380} /> */}
                 {/* </div> */}
-                <Bar options={options} data={data} />;
+                <Bar options={options} data={data} />
        
               </div>
               <div className="absolute right-2 top-4">

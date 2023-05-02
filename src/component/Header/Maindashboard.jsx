@@ -294,7 +294,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                             >
                               <path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z"></path>
                             </svg>
-                            <p>Charteithtext</p>
+                            <p>Chat With Text</p>
                           </div>
                         </div>
                       ),
@@ -622,7 +622,97 @@ const Maindashboard = memo(function Maindashboard(val) {
               </div> */}
            
           </div>  
+<<<<<<< HEAD
           <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-6" onClick={()=>{SetBoxId(1)}} >
+=======
+          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-4 relative" onClick={()=>{SetBoxId(1)}}>
+            <div className="grid grid-cols-12 gap-4 lg:gap-6 absolute top-0 left-0 h-full w-full p-6">
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+            </div>
+>>>>>>> 192c4636ddf71eda7273dc8f1c7fc1c5dea7bc35
             <Grid  SetBoxId={demo} />
           </div>
         </div>
