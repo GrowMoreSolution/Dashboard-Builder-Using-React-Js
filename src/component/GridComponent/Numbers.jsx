@@ -15,7 +15,7 @@ export default function Numbers() {
               </div>
               <div className="flex flex-wrap gap-2 items-center">
                   <p className="text-5xl text-black font-semibold">$1,000</p>
-                  <div className='grid grid-flow-row gap-1'>
+                  <div className='grid grid-flow-row gap-1 text-left'>
                     <p>
                       <span className='text-green-600 items-center gap-px px-2 py-1 text-[10px] bg-green-100 rounded-full inline-flex'>
                         <svg xmlns="http://www.w3.org/2000/svg" className='w-3 h-3' width="16" height="16" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z"></path></svg>

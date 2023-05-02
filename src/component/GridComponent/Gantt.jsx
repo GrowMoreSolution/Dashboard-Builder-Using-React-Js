@@ -3,7 +3,7 @@ import React from 'react'
 export default function Gantt() {
   return (
     <div>
-         <div className="bg-white p-4 rounded-md shadow w-full relative absolute">
+         <div className="bg-white p-4 rounded-md shadow w-full relative">
               <div className="flex items-center justify-between gap-2 mb-4 mr-4">
                   <p className="text-sm text-black font-semibold">Amount by stage</p>  
               </div>
