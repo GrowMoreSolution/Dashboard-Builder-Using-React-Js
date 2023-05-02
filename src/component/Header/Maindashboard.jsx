@@ -9,17 +9,29 @@ import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { Box } from "./Box.jsx";
 import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setSelectedBoxWidth } from "../../action/Boxsizeaction";
 
 const Maindashboard = memo(function Maindashboard(val) {
   const [BoxId, SetBoxId] = useState(1);
+  const dispatch = useDispatch()
 
   function demo(event,id){
     event.stopPropagation()
     SetBoxId(id)
   }
+  const BoxWidth =(val)=>{
+    // localStorage.setItem('selectedWid',val)
+    dispatch(
+      setSelectedBoxWidth(val)
+    ).then((res)=>{
+      // console.log(res);
+    })
+  }
+
   return (
     <DndProvider backend={HTML5Backend}>
-      <div>
+      <div >
         <Mainheader />
         <div className="px-4 bg-white flex justify-between shadow items-center gap-5 relative z-10 py-4 md:py-0">
           <div className="md:grid grid-flow-row hidden">
@@ -425,7 +437,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                     <p className="text-sm mb-2 font-semibold">Value Unit</p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-2">
                       <div>
-                      <div className="relative"  >
+                      <div className="relative"  onClick={()=>BoxWidth(1)}  >
                         <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center"  >
                           <div className="h-12 w-4/12 bg-grey/20 rounded-md"></div>
                           <input
@@ -439,7 +451,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                       <p className="text-sm mt-1">Small</p>
                       </div>
                       <div>
-                      <div className="relative" >
+                      <div className="relative"  onClick={()=>BoxWidth(2)}>
                         <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
                           <div className="h-12 w-6/12 bg-grey/20 rounded-md"></div>
                           <input
@@ -453,7 +465,7 @@ const Maindashboard = memo(function Maindashboard(val) {
                       <p className="text-sm mt-1">Medium</p>
                       </div>
                       <div>
-                      <div className="relative" >
+                      <div className="relative" onClick={()=>BoxWidth(3)} >
                         <label className="flex cursor-pointer rounded-md border border-grey/20 bg-white justify-between items-start gap-4 p-1.5 text-center">
                           <div className="h-12 w-full bg-grey/20 rounded-md"></div>
                           <input
@@ -610,7 +622,7 @@ const Maindashboard = memo(function Maindashboard(val) {
               </div> */}
            
           </div>  
-          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-6" onClick={()=>{SetBoxId(1)}}>
+          <div className="w-full flex-1 bg-grey/10 min-h-[calc(100vh-130px)] overflow-y-auto p-6" onClick={()=>{SetBoxId(1)}} >
             <Grid  SetBoxId={demo} />
           </div>
         </div>
