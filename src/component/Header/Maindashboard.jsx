@@ -689,6 +689,7 @@ const Maindashboard = memo(function Maindashboard(val) {
               <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
               <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
               <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
+              <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
               <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>          
               <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
               <div className="h-8 lg:h-16 2xl:h-24 bg-accent/10"></div>
