@@ -8,6 +8,7 @@ import SalesPipeline from './component/GridComponent/SalesPipeline';
 import Simpledata from './component/GridComponent/Simpledata';
 import Workload from './component/GridComponent/Workload';
 import Maindashboard from './component/Header/Maindashboard';
+import DashboardManager from './component/PublishDashboard/DashboardManager';
 
 export default [
   {
@@ -23,6 +24,11 @@ export default [
   {
     path:'/maindashboard',
     element:() => <Maindashboard/>,
+    exact:true,
+  },
+  {
+    path:'/dashboardmanager',
+    element:() => <DashboardManager/>,
     exact:true,
   },
   
